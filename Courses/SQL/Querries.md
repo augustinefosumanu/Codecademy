@@ -1,4 +1,4 @@
-# Course
+# Querries
 
 ## Introduction
 
