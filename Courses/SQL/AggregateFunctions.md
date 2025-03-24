@@ -1,4 +1,4 @@
-# Course
+# Aggregate Functions
 
 ## Introduction
 
