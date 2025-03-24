@@ -5,8 +5,8 @@
 **Confirm no celebs table exists by entering the following in the code editor:**
 
 ```shell
- select *
- from celebs;
+SELECT *
+FROM celebs;
 ```
 **Now that we know the database is empty, let’s create a new celebs table.**
 
@@ -102,10 +102,103 @@ CREATE TABLE awards (
 
 # Project
 
-## 
+## Task 1
 
-****
+**Create a table named friends with three columns:
+id that stores INTEGER
+name that stores TEXT
+birthday that stores DATE**
 
 ```shell
+CREATE TABLE friends(
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+```
 
+## Task 2
+
+**Beneath your current code, add Ororo Munroe to friends.
+Her birthday is May 30th, 1940.**
+
+```shell
+INSERT INTO friends(id, name, birthday)
+VALUES(1, 'Ororo Munroe', 'May 30th 1940');
+```
+
+## Task 3
+
+**Let’s make sure that Ororo has been added to the database:
+Check for two things:
+Is friends table created?
+Is Ororo Munroe added to it?**
+
+```shell
+SELECT * 
+FROM friends;
+```
+
+## Task 4
+
+**Let’s move on!
+Add two of your friends to the table.
+Insert an id, name, and birthday for each of them.**
+
+```shell
+INSERT INTO friends(id, name, birthday)
+VALUES(2, 'Musa Munroe', 'May 9th 1953');
+
+INSERT INTO friends(id, name, birthday)
+VALUES(3, 'Eva Munroe', 'May 4th 1965');
+```
+
+## Task 5
+
+**Ororo Munroe just realized that she can control the weather and decided to change her name. Her new name is “Storm”.
+Update her record in friends.**
+
+```shell
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+```
+
+## Task 6
+
+**Add a new column named email.**
+
+```shell
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+```
+
+## Task 7
+
+**Update the email address for everyone in your table.
+Storm’s email is storm@codecademy.com.**
+
+```shell
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+```
+
+## Task 8
+
+**Wait, Storm is fictional…
+Remove her from friends.**
+
+```shell
+DELETE FROM friends
+WHERE id = 1;
+```
+
+## Task 9
+
+**Great job! Let’s take a look at the result one last time:**
+
+```shell
+SELECT * 
+FROM friends;
 ```
